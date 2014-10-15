@@ -1,0 +1,22 @@
+#! /bin/bash
+
+# Provision a vagrant instance.
+
+set -e
+
+# Add some repositories and update the repo
+apt-get update -y
+apt-get install -y python-software-properties
+add-apt-repository -y ppa:chris-lea/node.js
+apt-get update -y
+
+# Install packages
+apt-get install -y  \
+  curl              \
+  dstat             \
+  lsof              \
+  man-db            \
+  mlocate           \
+  rsync             \
+  wget              \
+  nodejs
